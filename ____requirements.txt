@@ -1,0 +1,10 @@
+fastapi>=0.110.0
+uvicorn[standard]>=0.29.0
+python-multipart>=0.0.9      # für UploadFile
+torch>=2.1.0
+torchvision>=0.16.0
+trimesh>=4.3.0
+Pillow>=10.0.0
+
+# SHAP-E direkt von GitHub installieren:
+# pip install git+https://github.com/openai/shap-e.git
