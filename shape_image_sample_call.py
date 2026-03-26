@@ -1,7 +1,10 @@
 
 import requests
+import os
+from dotenv import load_dotenv
+load_dotenv()
 
-with open("/home/albert/HTL/htl-logo_rauten.jpg", "rb") as f:
+with open(os.getenv("IMAGE_FILE"), "rb") as f:
     response = requests.post(
         "http://10.10.11.11:2222/generate_shape/image",
         params={
