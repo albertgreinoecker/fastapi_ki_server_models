@@ -5,6 +5,9 @@ curl -X POST http://10.10.11.11:2222/generate \
 '''
 
 import requests
+import os
+from dotenv import load_dotenv
+load_dotenv()
 
 url = "http://10.10.11.11:2222/generate_shape/text"
 
@@ -13,7 +16,7 @@ headers = {
 }
 
 data = {
-    "prompt": "man with banana in the hand",
+    "prompt": os.getenv("SHAPE_PROMPT"),
     "num_steps": 64
 }
 
